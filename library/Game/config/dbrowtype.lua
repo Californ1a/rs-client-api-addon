@@ -27,26 +27,27 @@ local DBRow = {}
 ---@return DBRowType # The requested DBRowType.
 function DBRow.FromID(id) end
 
----Returns the number of values in the given column.
----@param columnIndex integer The column index to check. Column index values are 1-indexed.
----@return integer # How many values are available for the given column index.
-function DBRow:GetColumnValueCount(columnIndex) end
-
----Returns all [ValueTypes](https://developer.runescape.com/rs/game/config/vartype.html#valuetype) for each value in the given column.
----@param columnIndex integer The column index to check. Column index values are 1-indexed.
----@return ValueType[] # An array containing a [ValueType](https://developer.runescape.com/rs/game/config/vartype.html#valuetype) for each value in the given column index.
-function DBRow:GetColumnValueTypes(columnIndex) end
-
----Returns all values in the given column.
----@param columnIndex integer The column index to check. Column index values are 1-indexed.
----@return any[] # An array containing each value in the given column index. This array may be empty, or contain `nil` values. Use [GetColumnValueTypes](https://developer.runescape.com/rs/game/config/dbrowtype.html#getcolumnvaluetypes) to determine the types of the values returned by this method.
-function DBRow:GetColuimnValues(columnIndex) end
-
 ---@class DBRowType
 ---@field id integer The ID of this config type.
 ---@field configName string The name of this config, i.e. `"INVENT_PERK_LOOTING"`.
 ---@field typeName string The type of this config. Will always be `"DBRow"`.
 ---@field columnCount integer The total number of columns in this table.
 ---@field ownerDBTable DBTable The parent table config for this row config.
+local DBRowType = {}
+
+---Returns the number of values in the given column.
+---@param columnIndex integer The column index to check. Column index values are 1-indexed.
+---@return integer # How many values are available for the given column index.
+function DBRowType:GetColumnValueCount(columnIndex) end
+
+---Returns all [ValueTypes](https://developer.runescape.com/rs/game/config/vartype.html#valuetype) for each value in the given column.
+---@param columnIndex integer The column index to check. Column index values are 1-indexed.
+---@return ValueType[] # An array containing a [ValueType](https://developer.runescape.com/rs/game/config/vartype.html#valuetype) for each value in the given column index.
+function DBRowType:GetColumnValueTypes(columnIndex) end
+
+---Returns all values in the given column.
+---@param columnIndex integer The column index to check. Column index values are 1-indexed.
+---@return any[] # An array containing each value in the given column index. This array may be empty, or contain `nil` values. Use [GetColumnValueTypes](https://developer.runescape.com/rs/game/config/dbrowtype.html#getcolumnvaluetypes) to determine the types of the values returned by this method.
+function DBRowType:GetColuimnValues(columnIndex) end
 
 config.DBRow = DBRow

@@ -32,30 +32,31 @@ local DBTable = {}
 ---@return DBTableType # The requested DBTableType.
 function DBTable.FromID(id) end
 
----Returns the number of values in the given column.
----@param columnIndex integer The column index to check. Column index values are 1-indexed.
----@return integer # How many values are available for the given column index.
-function DBTable:GetColumnValueCount(columnIndex) end
-
----Returns all [ValueTypes](https://developer.runescape.com/rs/game/config/vartype.html#valuetype) for each value in the given column.
----@param columnIndex integer The column index to check. Column index values are 1-indexed.
----@return ValueType[] # An array containing a [ValueType](https://developer.runescape.com/rs/game/config/vartype.html#valuetype) for each value in the given column index.
-function DBTable:GetColumnValueTypes(columnIndex) end
-
----Returns whether a given column in the table has any default values.
----@param columnIndex integer The column index to check. Column index values are 1-indexed.
----@return boolean # Whether the given column index can provide default values.
-function DBTable:GetColumnHasDefaultValues(columnIndex) end
-
----Returns all default values for the given column.
----@param columnIndex integer The column index to check. Column index values are 1-indexed.
----@return any[] # An array containing each default value in the given column index. This array may be empty, or contain `nil` values. Use [GetColumnValueTypes](https://developer.runescape.com/rs/game/config/dbtabletype.html#getcolumnvaluetypes) to determine the types of the values returned by this method.
-function DBTable:GetColumnDefaultValues(columnIndex) end
-
 ---@class DBTableType
 ---@field id integer The ID of this config type.
 ---@field configName string The name of this config, i.e. `"INVENT_PERK_TABLE"`.
 ---@field typeName string The type of this config. Will always be `"DBTable"`.
 ---@field columnCount integer The total number of columns in this table.
+local DBTableType = {}
+
+---Returns the number of values in the given column.
+---@param columnIndex integer The column index to check. Column index values are 1-indexed.
+---@return integer # How many values are available for the given column index.
+function DBTableType:GetColumnValueCount(columnIndex) end
+
+---Returns all [ValueTypes](https://developer.runescape.com/rs/game/config/vartype.html#valuetype) for each value in the given column.
+---@param columnIndex integer The column index to check. Column index values are 1-indexed.
+---@return ValueType[] # An array containing a [ValueType](https://developer.runescape.com/rs/game/config/vartype.html#valuetype) for each value in the given column index.
+function DBTableType:GetColumnValueTypes(columnIndex) end
+
+---Returns whether a given column in the table has any default values.
+---@param columnIndex integer The column index to check. Column index values are 1-indexed.
+---@return boolean # Whether the given column index can provide default values.
+function DBTableType:GetColumnHasDefaultValues(columnIndex) end
+
+---Returns all default values for the given column.
+---@param columnIndex integer The column index to check. Column index values are 1-indexed.
+---@return any[] # An array containing each default value in the given column index. This array may be empty, or contain `nil` values. Use [GetColumnValueTypes](https://developer.runescape.com/rs/game/config/dbtabletype.html#getcolumnvaluetypes) to determine the types of the values returned by this method.
+function DBTableType:GetColumnDefaultValues(columnIndex) end
 
 config.DBTable = DBTable

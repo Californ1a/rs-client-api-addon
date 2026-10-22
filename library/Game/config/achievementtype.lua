@@ -54,6 +54,7 @@ function Achievement.FromID(id) end
 ---@field completionCountForPrereqGroups integer How many prerequisite groups need to be complete in order to consider all prerequisites as completed. For example, if `prereqGroupCount == 2` and `completionCountForPrereqGroups == 1` then only one of the two groups needs to be completed.
 ---@field requirementGroupCount integer How many separate groups of requirement tests exist.
 ---@field completionCountForRequirementGroups integer How many requirement groups need to be complete in order to consider all requirements as completed. For example, if `requirementGroupCount == 2` and `completionCountForRequirementGroups == 1` then only one of the two groups needs to be completed.
+local AchievementType = {}
 
 ---@class AchievementDescription
 ---@field type AchievementDescriptionType
@@ -162,20 +163,20 @@ local AchievementHiddenType = {
 ---Depending on the value of [GetSubItemCompletionCountForPrereqGroup()](https://developer.runescape.com/rs/game/config/achievementtype.html#getsubitemcompletioncountforprereqgroup), this can mean all or only some of the individual prerequisites have actually been completed.
 ---@param group integer The group ID to be tested for completion. `group` **is 0-indexed**.
 ---@return boolean # Whether the prerequisite group is considered complete.
-function Achievement:GetPreqGroupComplete(group) end
+function AchievementType:GetPreqGroupComplete(group) end
 
 ---Returns how many individual prerequisites, each with the same group, must be completed for that group to be considered complete.
 ---
 ---For example, if there were three prerequisites with group 0, and `GetSubItemCompletionCountForPrereqGroup(0)` returned a value of 1, then only one of the three prerequisites will need to be completed.
 ---@param group integer The group ID to be checked. `group` **is 0-indexed**.
 ---@return integer # How many items in the prerequisite group need to be completed for the entire group to be considered complete.
-function Achievement:GetSubItemCompletionCountForPrereqGroup(group) end
+function AchievementType:GetSubItemCompletionCountForPrereqGroup(group) end
 
 ---Returns how many individual requirements, each with the same group, must be completed for that group to be considered complete.
 ---
 ---For example, if there were three requirements with group 0, and `GetSubItemCompletionCountForRequirementGroup(0)` returned a value of 1, then only one of the three requirements will need to be completed.
 ---@param group integer The group ID to be checked. `group` **is 0-indexed**.
 ---@return integer # How many items in the requirement group need to be completed for the entire group to be considered complete.
-function Achievement:GetSubItemCompletionCountForRequirementGroup(group) end
+function AchievementType:GetSubItemCompletionCountForRequirementGroup(group) end
 
 config.Achievement = Achievement
