@@ -37,7 +37,7 @@ For other editors, you will need to manually download the addon and configure yo
   - [x] `PersistentDB`
   - [x] `Plugin`
   - [x] `String Utils`
-- [x] `Game`
+- [ ] `Game`
   - [x] `Camera`
   - [x] `Chat`
   - [x] `CoordFine`
