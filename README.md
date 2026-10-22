@@ -64,11 +64,11 @@ For other editors, you will need to manually download the addon and configure yo
     - [x] `MapElementType`
     - [x] `NPCType`
     - [x] `ObjType`
-    - [ ] `ParamType`
-    - [ ] `QuestType`
-    - [ ] `SeqType`
-    - [ ] `SpotAnimType`
-    - [ ] `StructType`
+    - [x] `ParamType`
+    - [x] `QuestType`
+    - [x] `SeqType`
+    - [x] `SpotAnimType`
+    - [x] `StructType`
     - [x] `VarType`
   - [x] `Entity`
     - [x] `LocType`
