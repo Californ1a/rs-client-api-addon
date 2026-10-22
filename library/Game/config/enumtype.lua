@@ -17,7 +17,7 @@
 ---
 ---* Input and output [ValueTypes](https://developer.runescape.com/rs/game/config/vartype.html#valuetype)
 ---* Key-value data pairs.
----@class Enum
+---@class config.Enum
 ---@field [string] EnumType
 local Enum = {}
 

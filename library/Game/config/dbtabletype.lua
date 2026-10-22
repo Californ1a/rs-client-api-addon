@@ -23,7 +23,7 @@
 ---```
 ---
 ---**ℹ Info:** A `DBTableType` is a Proxy usertype, which means it is safe to copy and store in your scripts.<br>It cannot, however, be used with any persistent storage.
----@class DBTable
+---@class config.DBTable
 ---@field [string] DBTableType
 local DBTable = {}
 

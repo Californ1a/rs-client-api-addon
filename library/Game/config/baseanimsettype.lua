@@ -18,7 +18,7 @@
 ---* Overlay height offset
 ---* [Seqs](https://developer.runescape.com/rs/game/config/seqtype.html) to use for various animations
 ---* ... TODO
----@class BaseAnimSet
+---@class config.BaseAnimSet
 ---@field [string] BaseAnimSetType
 local BaseAnimSet = {}
 

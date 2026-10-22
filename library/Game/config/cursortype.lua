@@ -17,7 +17,7 @@
 ---* Sprite ID
 ---
 ---**ℹ Info:** A cursor hotspot is the pixel inside the source sprite where the 'click' happens.<br>This is usually aligned to the top of a finger or arrow, etc.
----@class Cursor
+---@class config.Cursor
 ---@field [string] CursorType
 local Cursor = {}
 

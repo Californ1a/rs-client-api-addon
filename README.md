@@ -56,14 +56,14 @@ For other editors, you will need to manually download the addon and configure yo
     - [x] `DBRowType`
     - [x] `DBTableType`
     - [x] `EnumType`
-    - [ ] `FontType`
-    - [ ] `HeadbarType`
-    - [ ] `HitmarkType`
-    - [ ] `InvType`
-    - [ ] `LocType`
-    - [ ] `MapElementType`
-    - [ ] `NPCType`
-    - [ ] `ObjType`
+    - [x] `FontType`
+    - [x] `HeadbarType`
+    - [x] `HitmarkType`
+    - [x] `InvType`
+    - [x] `LocType`
+    - [x] `MapElementType`
+    - [x] `NPCType`
+    - [x] `ObjType`
     - [ ] `ParamType`
     - [ ] `QuestType`
     - [ ] `SeqType`

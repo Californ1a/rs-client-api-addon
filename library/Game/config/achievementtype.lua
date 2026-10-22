@@ -17,7 +17,7 @@
 ---* Rewards
 ---* Prerequisites
 ---* Requirements
----@class Achievement
+---@class config.Achievement
 ---@field [string] AchievementType
 local Achievement = {}
 
@@ -150,12 +150,9 @@ local AchievementDescriptionType = {
 ---An achievement's display behaviour is controlled by this enumeration, and is provided by the `AchievementType.hiddenType` property.
 ---@enum AchievementHiddenType
 local AchievementHiddenType = {
-	---Achievement is always displayed
-	NEVER = 0,
-	---Achievement is hidden if any prerequisites are incomplete.
-	IF_LOCKED = 1,
-	---Achievement is hidden until all requirements are completed.
-	UNTIL_COMPLETE = 2,
+	NEVER = 0, ---Achievement is always displayed
+	IF_LOCKED = 1, ---Achievement is hidden if any prerequisites are incomplete.
+	UNTIL_COMPLETE = 2, ---Achievement is hidden until all requirements are completed.
 }
 
 ---Returns whether the given prerequisite group is considered complete.
