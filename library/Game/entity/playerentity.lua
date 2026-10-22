@@ -26,4 +26,3 @@
 ---@field facingTarget integer The target facing angle, in degrees, of this `PlayerEntity`.<br>The `PlayerEntity` will be turning toward this angle, if different from `PlayerEntity.facing`.
 ---@field route CoordGrid[] Returns a list of the current coordinates in the `PlayerEntity`'s movement route.<br>Returns the current position coordinate if the `PlayerEntity` is not moving.
 ---@field routeEnd CoordGrid? Returns the final coordinate in the `PlayerEntity`'s movement route.<br>Returns the current position coordinate if the `PlayerEntity` is not moving.
-PlayerEntity = {}

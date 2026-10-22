@@ -1,0 +1,35 @@
+---@meta
+
+---An `NPCEntity` represents an instance of an [NPCType](https://developer.runescape.com/rs/game/config/npctype.html) that is currently active in the game world.
+---
+---See [NPCList](https://developer.runescape.com/rs/game/list/npclist.html) for information on how to access `NPCEntites`.
+---
+---**ℹ Info:** A `NPCEntity` is a Proxy usertype, which means it is safe to copy and store in your scripts.<br>It cannot, however, be used with any persistent storage.
+---
+---**⚠ Warning:** Use `NPCEntity.isValid` to confirm that an entity still exists before trying to access its properties.<br>Entities can be removed from the client by the server for various reasons, i.e. due to moving beyond the player view distance or being deleted by the server.<br>When an entity is removed it will become invalid, and any copies of this usertype should be disposed of.
+---
+---**⚠ Warning:**  If the same entity is re-added on the client, such as walking back into visibility range, then a different new NPCEntity will be created.
+---
+---Information available within an `NPCEntity` includes:
+---
+---* [NPCType](https://developer.runescape.com/rs/game/config/npctype.html)
+---* UID
+---* World position
+---* Facing direction
+---* TODO
+---@class NPCEntity
+---@field isValid boolean Whether this entity still exists. ⚠ Dispose of this usertype object when invalid.
+---@field uid integer The unique ID (UID) of this entity.
+---@field displayName string The display name of this entity.
+---@field config NPCType The config used by this entity.
+---@field parentConfig NPCType The parent config used by this entity, if it is a [MultiNPC](https://developer.runescape.com/rs/game/config/npctype.html#multinpc).
+---@field configID integer The ID of the config used by this entity.
+---@field parentConfigID integer The ID of the parent config used by this entity, if it is a [MultiNPC](https://developer.runescape.com/rs/game/config/npctype.html#multinpc).
+---@field isMultiNPC boolean Whether this `NPCEntity` is a [MultiNPC](https://developer.runescape.com/rs/game/config/npctype.html#multinpc).
+---@field position Vector3 The world position of this `NPCEntity`.
+---@field coordGrid CoordGrid Returns the CoordGrid tile this `NPCEntity` is currently on.
+---@field aabb AABB Returns the current bounding box for this `NPCEntity`.
+---@field facing integer The current facing angle, in degrees, of this `NPCEntity`.
+---@field facingTarget integer The target facing angle, in degrees, of this `NPCEntity`.<br>The `NPCEntity` will be turning towards this angle, if different from `NPCEntity.facing`.
+---@field route CoordGrid[] Returns a list of the current coordinates in the `NPCEntity`'s movement route.<br>Returns the current position coordinate if the `NPCEntity` is not moving.
+---@field routeEnd CoordGrid? Returns the final coordinate in the `NPCEntity`'s movement route.<br>Returns the current position coordinate if the `NPCEntity` is not moving.

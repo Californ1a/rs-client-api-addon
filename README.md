@@ -55,7 +55,7 @@ For other editors, you will need to manually download the addon and configure yo
     - [x] `CursorType`
     - [x] `DBRowType`
     - [x] `DBTableType`
-    - [ ] `EnumType`
+    - [x] `EnumType`
     - [ ] `FontType`
     - [ ] `HeadbarType`
     - [ ] `HitmarkType`
@@ -70,10 +70,10 @@ For other editors, you will need to manually download the addon and configure yo
     - [ ] `SpotAnimType`
     - [ ] `StructType`
     - [x] `VarType`
-  - [ ] `Entity`
-    - [ ] `LocType`
-    - [ ] `NPCEntity`
-    - [ ] `ObjStackEntity`
+  - [x] `Entity`
+    - [x] `LocType`
+    - [x] `NPCEntity`
+    - [x] `ObjStackEntity`
     - [x] `PlayerEntity`
   - [ ] `List`
     - [ ] `LocList`
