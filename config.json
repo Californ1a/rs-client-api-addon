@@ -1,5 +1,14 @@
 {
 	"$schema": "https://raw.githubusercontent.com/LuaLS/LLS-Addons/main/schemas/addon_config.schema.json",
 	"words": ["id\\.Component\\.TOPLEVEL_V2__PLUGIN_BUILD_LAYER_TOP"],
-	"files": ["main.lua"]
+	"files": ["main.lua"],
+	"settings": {
+		"Lua.runtime.version": "Lua 5.4",
+		"Lua.runtime.builtin": {
+			"package": "disable",
+			"os": "disable",
+			"debug": "disable",
+			"io": "disable"
+		}
+	}
 }
