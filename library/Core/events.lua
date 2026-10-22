@@ -700,7 +700,7 @@ function Event.LocAnimation.Unsubscribe(name) end
 Event.InventoryAdded = {}
 
 ---@class InventoryAdded_Event
----@field inv InvTypeProxy Config of the inventory added.
+---@field inv InvType Config of the inventory added.
 
 ---Subscribes to a InventoryAdded event.
 ---@param name string Custom event name.
@@ -716,7 +716,7 @@ function Event.InventoryAdded.Unsubscribe(name) end
 Event.InventoryUpdated = {}
 
 ---@class InventoryUpdated_Event
----@field inv InvTypeProxy Config of the inventory updated.
+---@field inv InvType Config of the inventory updated.
 ---@field slotsUpdated integer[] List of slot ids that have been updated.
 
 ---Subscribes to a InventoryUpdated event.
@@ -733,7 +733,7 @@ function Event.InventoryUpdated.Unsubscribe(name) end
 Event.InventoryRemoved = {}
 
 ---@class InventoryRemoved_Event
----@field inv InvTypeProxy Config of the inventory removed.
+---@field inv InvType Config of the inventory removed.
 
 ---Subscribes to a InventoryRemoved event.
 ---@param name string Custom event name.

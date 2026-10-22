@@ -32,7 +32,7 @@ function DBRow.FromID(id) end
 ---@field configName string The name of this config, i.e. `"INVENT_PERK_LOOTING"`.
 ---@field typeName string The type of this config. Will always be `"DBRow"`.
 ---@field columnCount integer The total number of columns in this table.
----@field ownerDBTable DBTable The parent table config for this row config.
+---@field ownerDBTable DBTableType The parent table config for this row config.
 local DBRowType = {}
 
 ---Returns the number of values in the given column.

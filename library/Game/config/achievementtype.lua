@@ -42,7 +42,7 @@ function Achievement.FromID(id) end
 ---@field hasRequirementDescriptions boolean Whether any of the achievement requirements contains a description.
 ---@field totalPrereqCount integer How many total prerequisites this achievement contains.
 ---@field totalRequirementCount integer How many total requirements this achievement contains.
----@field dbRowConfig DBRow Any associated [DBRow](https://developer.runescape.com/rs/game/config/dbrowtype.html) for this achievement. Returns `nil` if not set.
+---@field dbRowConfig DBRowType Any associated [DBRow](https://developer.runescape.com/rs/game/config/dbrowtype.html) for this achievement. Returns `nil` if not set.
 ---@field tallyTarget integer For achievements with a tally (such as killing 100 monsters), this returns what the target value is. Each achievement can have only one tally. Returns `-1` if not set.
 ---@field tallyProgress integer For achievements with a tally, this returns the current progression count. Returns `-1` if not set.
 ---@field descriptions AchievementDescription[] Returns a list of entries, each of which contain a [AchievementDescriptionType]() and the text for the description.
@@ -65,7 +65,7 @@ local AchievementType = {}
 ---@field quests AchievementTestQuest[]
 ---@field achievements AchievementTestAchievement[]
 ---@field varTotals AchievementTestVarTotal[]
----@field varTestBits AchievementTestVarBit[]
+---@field varTestBits AchievementTestVarTestBit[]
 
 ---This test collects Player Character's levels in the given [SkillTypes](https://developer.runescape.com/rs/game/player.html#skilltype) into one cumulative total, and compares it against the target total level.
 ---

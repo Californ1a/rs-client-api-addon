@@ -57,7 +57,7 @@ function ScreenConvert.ScreenToCoordFine(x, y, level) end
 ---Returns the screen XY position, as a [Vector2](https://developer.runescape.com/rs/math/vector.html#vector2), of the given [CoordGrid](https://developer.runescape.com/rs/game/coordgrid.html).<br>The position is calculated from the centre of the coordinate tile.<br>An optional in-game vertical offset `heightAboveGround`, which in Fine units, can be applied to the coordinate.
 ---@param coordGrid CoordGrid The tile coordinate to convert to a screen position.<br>Calculations are made from the centre of the tile.
 ---@param heightAboveGround integer An additional vertical offset, in *Fine units*, to add to the tile position before converting.
----@return Vector2 # The resulting screen XY position.<br>Returns `nil` if the game world or ground data for the given coordinate is unavailable.
+---@return Vector2? # The resulting screen XY position.<br>Returns `nil` if the game world or ground data for the given coordinate is unavailable.
 function ScreenConvert.CoordGridToScreen(coordGrid, heightAboveGround) end
 
 ---Returns the screen XY position, as a [Vector2](https://developer.runescape.com/rs/math/vector.html#vector2), of the given [CoordFine](https://developer.runescape.com/rs/game/coordfine.html).<br>An optional in-game vertical offset `heightAboveGround`, which in *Fine units*, can be applied to the coordinate.
@@ -67,12 +67,12 @@ function ScreenConvert.CoordGridToScreen(coordGrid, heightAboveGround) end
 ---**ℹ Info:** If you need to convert a position with an explicit vertical component, use ScreenConvert.Vector3ToScreen.
 ---@param coordFine CoordFine The tile coordinate to convert to a screen position.<br>The vertical position component is ignored.
 ---@param heightAboveGround integer An additional vertical offset, in *Fine units*, to add to the tile position before converting.
----@return Vector2 # The resulting screen XY position.<br>Returns `nil` if the game world or ground data for the given coordinate is unavailable.
+---@return Vector2? # The resulting screen XY position.<br>Returns `nil` if the game world or ground data for the given coordinate is unavailable.
 function ScreenConvert.CoordFineToScreen(coordFine, heightAboveGround) end
 
 ---Returns the screen XY position, as a [Vector2](https://developer.runescape.com/rs/math/vector.html#vector2), of the given [Vector3](https://developer.runescape.com/rs/math/vector.html#vector3), in *Fine units*.
 ---
 ---**ℹ Info:** This method does not perform a ground height look-up, and so will perform better than coordinate-to-screen conversions.
----@param vector3 Vector3 The world position, in *Fine units*, to convert to a screen position.
----@return Vector2 # The resulting screen XY position.<br>Returns `nil` if the game world is unavailable.
-function ScreenConvert.Vector3ToScreen() end
+---@param vec3 Vector3 The world position, in *Fine units*, to convert to a screen position.
+---@return Vector2? # The resulting screen XY position.<br>Returns `nil` if the game world is unavailable.
+function ScreenConvert.Vector3ToScreen(vec3) end

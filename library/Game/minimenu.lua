@@ -281,7 +281,7 @@ function MiniMenu:Swap(indexA, indexB) end
 ---@class LocData
 ---@field coordGridX integer The south-west tile X coordinate the Loc entity is positioned at.
 ---@field coordGridZ integer The south-west tile Z coordinate the Loc entity is positioned at.
----@field config LogType The config for the Loc entry.
+---@field config LocType The config for the Loc entry.
 
 ---@class ObjData
 ---@field entity ObjStackEntity The ObjStack entity source for this entry.

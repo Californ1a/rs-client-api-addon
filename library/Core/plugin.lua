@@ -22,18 +22,23 @@ PluginPermissions = {
 	trackingAccess = {},
 }
 
+---@class PluginUrl: string
+
 ---@class PluginUrls
----@field [string] string? The URL of the resource.
+---@field [string] PluginUrl? The URL of the resource.
 Plugin.urls = {}
 
----@class PluginResource
----@field [string] string|PluginResource? The resource or path to the resource.
+---@class PluginResourceTree
+---@field [string] PluginResourceTree|PluginResource? The resource or path to the resource.
+
+---@alias PluginAudioResource PluginResourceTree|PluginResource
+
+---@alias PluginImageResource PluginResourceTree|PluginResource
 
 ---Table containing all custom resources stored under the current plugin's `resources` folder, using their filenames as table keys. See [Plugin Resources](https://developer.runescape.com/rs/core/plugin.html#plugin-resources) for information on how to use these.
 ---
 ---**ℹ Info:** Nested folders are represented as sub-tables, so for example `resources/images/menu/background.png` can be accessed as `Plugin.resources.images.menu.background`.
----@class PluginResources
----@field [string] string|PluginResource? The resource or path to the resource.
+---@class PluginResourceTree The resource or path to the resource.
 Plugin.resources = {}
 
 ---Checks if the user has allowed the specified permission for the current plugin.
