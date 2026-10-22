@@ -76,7 +76,7 @@ For other editors, you will need to manually download the addon and configure yo
     - [x] `ObjStackEntity`
     - [x] `PlayerEntity`
   - [ ] `List`
-    - [ ] `LocList`
+    - [x] `LocList`
     - [ ] `NPCList`
     - [ ] `ObjStackList`
     - [ ] `PlayerList`
