@@ -49,7 +49,7 @@ For other editors, you will need to manually download the addon and configure yo
   - [x] `ScreenConvert`
   - [x] `Shapes`
   - [x] `World`
-  - [x] `Config`
+  - [ ] `Config`
     - [x] `AchievementType`
     - [x] `BaseAnimSetType`
     - [x] `CursorType`
@@ -69,12 +69,12 @@ For other editors, you will need to manually download the addon and configure yo
     - [ ] `SeqType`
     - [ ] `SpotAnimType`
     - [ ] `StructType`
-    - [ ] `VarType`
+    - [x] `VarType`
   - [ ] `Entity`
     - [ ] `LocType`
     - [ ] `NPCEntity`
     - [ ] `ObjStackEntity`
-    - [ ] `PlayerEntity`
+    - [x] `PlayerEntity`
   - [ ] `List`
     - [ ] `LocList`
     - [ ] `NPCList`

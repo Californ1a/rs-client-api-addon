@@ -1,0 +1,29 @@
+---@meta
+
+---An PlayerEntity represents a player that is currently active in the game world.
+---
+---See [PlayerList](https://developer.runescape.com/rs/game/list/playerlist.html) for information on how to access PlayerEntities.
+---
+---**ℹ Info:** A `PlayerEntity` is a Proxy usertype, which means it is safe to copy and store in your scripts.<br>It cannot, however, be used with any persistent storage.
+---
+---**⚠ Warning:** Use PlayerEntity.isValid to confirm that an entity still exists before trying to access its properties.<br>Entities can be removed from the client by the server for various reasons, i.e. due to moving beyond the player view distance or teleporting.<br>When an entity is removed it will become invalid, and any copies of this usertype should be disposed of.
+---
+---**⚠ Warning:** If the same entity is re-added to the client by the server, such as walking back into visibility range, then a different new PlayerEntity will be created.
+---
+---Information available within an `PlayerEntity` includes:
+---
+---* UID
+---* World position
+---* Facing direction
+---@class PlayerEntity
+---@field isValid boolean Whether this entity still exists.<br>⚠ Dispose of this usertype object when invalid.
+---@field uid integer The unique ID (UID) of this entity.
+---@field displayName string The display name of this entity.
+---@field position Vector3 The world position of this `PlayerEntity`.
+---@field coordGrid CoordGrid Returns the CoordGrid tile this `PlayerEntity` is currently on.
+---@field aabb AABB Returns the current bounding box for this `PlayerEntity`.
+---@field facing integer The current facing angle, in degrees, of this `PlayerEntity`.
+---@field facingTarget integer The target facing angle, in degrees, of this `PlayerEntity`.<br>The `PlayerEntity` will be turning toward this angle, if different from `PlayerEntity.facing`.
+---@field route CoordGrid[] Returns a list of the current coordinates in the `PlayerEntity`'s movement route.<br>Returns the current position coordinate if the `PlayerEntity` is not moving.
+---@field routeEnd CoordGrid? Returns the final coordinate in the `PlayerEntity`'s movement route.<br>Returns the current position coordinate if the `PlayerEntity` is not moving.
+PlayerEntity = {}
