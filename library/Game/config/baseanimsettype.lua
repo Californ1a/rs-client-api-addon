@@ -24,7 +24,7 @@ local BaseAnimSet = {}
 
 ---Returns a `BaseAnimSetType` from its ID.
 ---@param id integer The ID of the BaseAnimSet to retrieve.
----@return BaseAnimSet # The requested BaseAnimSet.
+---@return BaseAnimSetType # The requested BaseAnimSetType.
 function BaseAnimSet.FromID(id) end
 
 ---@class BaseAnimSetType

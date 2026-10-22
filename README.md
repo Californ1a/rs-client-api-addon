@@ -52,9 +52,9 @@ For other editors, you will need to manually download the addon and configure yo
   - [x] `Config`
     - [x] `AchievementType`
     - [x] `BaseAnimSetType`
-    - [ ] `CursorType`
-    - [ ] `DBRowType`
-    - [ ] `DBTableType`
+    - [x] `CursorType`
+    - [x] `DBRowType`
+    - [x] `DBTableType`
     - [ ] `EnumType`
     - [ ] `FontType`
     - [ ] `HeadbarType`

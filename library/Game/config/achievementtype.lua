@@ -23,7 +23,7 @@ local Achievement = {}
 
 ---Returns an `AchievementType` from its ID.
 ---@param id integer The ID of the achievement to retrieve.
----@return AchievementType # The requested achievement.
+---@return AchievementType # The requested AchievementType.
 function Achievement.FromID(id) end
 
 ---@class AchievementType
