@@ -78,11 +78,11 @@ For other editors, you will need to manually download the addon and configure yo
   - [ ] `List`
     - [x] `LocList`
     - [x] `NPCList`
-    - [ ] `ObjStackList`
-    - [ ] `PlayerList`
+    - [x] `ObjStackList`
+    - [x] `PlayerList`
     - [ ] `ShapeList`
 - [ ] `Math`
-  - [ ] `AABB`
+  - [x] `AABB`
   - [ ] `Matrix`
   - [ ] `Quaternion`
   - [ ] `Rect`
